@@ -7,11 +7,26 @@
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVLFH1LKGP"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17417674454"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-WVLFH1LKGP');
+    gtag('config', 'AW-17417674454');
+
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-17417674454/BGUwCku47v4aENa9svFA',
+          'event_callback': callback
+      });
+      return false;
+    }
   </script>
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
@@ -184,7 +199,7 @@
   </div>
 
   <div class="cta">
-    <a href="https://pay.kiwify.com.br/Ln91AAs?afid=Yvrfm428" target="_blank">SIM! Eu quero comprar...</a>
+    <a href="https://pay.kiwify.com.br/Ln91AAs?afid=Yvrfm428" target="_blank" onclick="return gtag_report_conversion(this.href);">SIM! Eu quero comprar...</a>
   </div>
 
   <div class="countdown-container">
@@ -240,7 +255,7 @@
   </div>
 
   <div class="cta">
-    <a href="https://pay.kiwify.com.br/Ln91AAs?afid=Yvrfm428" target="_blank">QUERO GARANTIR MINHA VAGA AGORA!</a>
+    <a href="https://pay.kiwify.com.br/Ln91AAs?afid=Yvrfm428" target="_blank" onclick="return gtag_report_conversion(this.href);">QUERO GARANTIR MINHA VAGA AGORA!</a>
   </div>
 
   <footer>
